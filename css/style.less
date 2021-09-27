@@ -1,0 +1,78 @@
+.paddingTB20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.paddingTB40 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.paddingTB80 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.border {
+  border: 1px solid red;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.counter {
+  font-size: 60px;
+}
+
+#countdown {
+  display: none;
+  position: relative;
+  margin-bottom: 20px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+
+#countdown-number {
+  color: #000;
+  display: inline-block;
+  line-height: 39px;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+svg circle {
+  stroke-dasharray: 113px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke: #2198f8;
+  fill: none;
+  animation: countdown 30s linear forwards;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 113px;
+  }
+}
